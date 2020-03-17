@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>
+        Retirement Calculator
+    </title>
+    <script type = "text/javascript">
+        function calc(){
+            var wh = document.getElementById("workhours").value;
+            var inc = document.getElementById("income").value;
+            var bnot = 1.719362;
+            var retsat = bnot + (0.000238 * wh) - (0.000002 * inc);
+            
+            document.getElementById("result").value = retsat;            
+        }
+    </script>
+    <style>
+        html{
+            background-image: url('https://s32566.pcdn.co/wp-content/uploads/2020/03/Retirement-clock.jpg');
+            background-size: cover;
+        }
+        h1{
+            background-color: gold;
+            font-family: fantasy;
+            padding: 10px;
+        }
+        form{
+            padding: 20px;
+            background-color: aliceblue;
+            font-family: sans-serif;
+        }
+        footer{
+            background-color: gold;
+        }
+    </style>
+</head>
+  
+<h1>
+    <center>Retirement Satisfaction Calculator</center>
+</h1>
+<form>
+    Weekly Hours Worked: &nbsp; <input type= "text" id ="workhours" maxlength ="5">
+    <br><br>
+    Annual Income (No Commas): &nbsp; $<input type= "text" id ="income" maxlength ="10">
+    <br><br>
+    <input type="button" value="Calculate" onclick="calc();">
+    <br><br>
+    Predicted Score: <input type = "text" id ="result">
+    <br><br>
+    <p>
+        1 = Very Satisfying <br>
+        2 = Moderately Satisfying <br>
+        3 = Not at All Satisfying <br>
+    </p>
+    Score is determined by 1.719362 + 0.000238(HOURS) - 0.000002(INCOME)
+</form>
+<footer>
+    Based on a multiple regression analysis of data provided by the Health and Retirement Study.<br>
+    Thank you Professor Castel!
+</footer>
