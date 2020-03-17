@@ -8,7 +8,7 @@
             var wh = document.getElementById("workhours").value;
             var inc = document.getElementById("income").value;
             var bnot = 1.719362;
-            var retsat = bnot + (0.000238 * wh) - (0.000002 * inc);
+            var retsat = bnot + (0.000238 * wh) - (0.00000227 * inc);
             
             document.getElementById("result").value = retsat;            
         }
@@ -66,7 +66,7 @@
         2 = Moderately Satisfying <br>
         3 = Not at All Satisfying <br>
     </p>
-    Score is determined by 1.719362 + 0.000238(HOURS) - 0.000002(INCOME)
+    Score is determined by 1.719362 + 0.000238(HOURS) - 0.00000227(INCOME)
 </form>
 <footer>
     Based on a multiple regression analysis of data provided by the Health and Retirement Study.<br>
